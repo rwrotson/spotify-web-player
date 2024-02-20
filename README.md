@@ -66,13 +66,15 @@ You can get Spotify keys following [this instruction](https://developer.spotify.
 
 ### Spotify Desktop
 
-Only available for macOS now.
+_Only available for macOS now_.
 
 If you want to enable Spotify Desktop interaction, you need a running Spotify Desktop application on you backend host.
 
 By default, you can't control host application, such as Spotify Desktop by a process inside Docker container, so these endpoints are deactivated.
 
-Whatsoever, if you run backend from inside Docker container, you also need to provide `ENABLE_SPOTIFY_DESKTOP=1` environment variable and set up SSH connection to your host. Basically establishing SSH connection between Docker container and host is not the best idea due to security concerns. However, if you are sure in your environment, actions and consequences, you can SSH with preinstalled `ssh-client` and `set-up` docker-compose helper service (uncomment it in `docker-compose.yml`).
+Whatsoever, if you run backend from inside Docker container, you also need to provide `ENABLE_SPOTIFY_DESKTOP=1` environment variable and set up SSH connection to your host.
+
+**NB**: Basically establishing SSH connection between Docker container and host is not the best idea due to security concerns. However, if you are sure in your environment, actions and consequences, you can SSH with preinstalled `ssh-client` and `set-up` docker-compose helper service (uncomment it in `docker-compose.yml`).
 
 ### Poetry installation
 
@@ -89,7 +91,7 @@ to provide envs, you can create .env file like this in the root directory (one l
 BACKEND_HOST=0.0.0.0
 BACKEND_PORT=8000
 FRONTEND_HOST=0.0.0.0
-FRONTEND_PORT=5000
+FRONTEND_PORT=3000
 
 SPOTIFY_CLIENT_ID=xxx
 SPOTIFY_CLIENT_SECRET=xxx
@@ -125,7 +127,9 @@ Then serve generated `bundle.js` any way you like.
 
 # Start
 
-You may need to go to `http://{BACKEND_HOST}:{BACKEND_PORT}/auth/login` to authenticate backend for SpotifyAPI. Give all permissions needed. If the application is not used for a long time, the procedure will have to be repeated.
+You may need to go to `http://{BACKEND_HOST}:{BACKEND_PORT}/auth/login` to authenticate backend for SpotifyAPI. Give all permissions needed.
+
+If the application is not used for a long time, the procedure will have to be repeated.
 
 # Settings
 
