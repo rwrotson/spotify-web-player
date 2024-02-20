@@ -1,0 +1,49 @@
+.btn {
+  background-color: var(--COLOR-WHITE);
+  height: 3rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+  border: 0px solid transparent;
+  user-select: none;
+  cursor: pointer;
+
+  &:disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+
+  img {
+    width: 80%;
+    height: 80%;
+    transition: transform 0.2s ease-in-out;
+    user-select: none;
+  }
+
+  &:hover img {
+    transform: scale(1.1);
+  }
+}
+
+.btn-clicked {
+  background-color: var(--COLOR-GREEN);
+
+  img {
+    transform: scale(0.55);
+  }
+
+  &:hover img {
+    transform: scale(0.55);
+  }
+}
+
+.btn-pressed {
+  img {
+    transform: scale(0.55);
+  }
+
+  &:hover img {
+    transform: scale(0.7);
+  }
+}

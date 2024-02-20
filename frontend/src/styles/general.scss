@@ -1,0 +1,14 @@
+:root {
+  	--COLOR-BLACK: #000000;
+	--COLOR-WHITE: #ffffff;
+	--COLOR-LIGHT-GREY: #242424;
+	--COLOR-DARK-GREY: #131313;
+	--COLOR-GREEN: #51da63;
+}
+
+body {
+	background-color: var(--COLOR-BLACK);
+	font-size: 10px;
+	border: 0px solid transparent;
+	border-radius: 5px;
+}

@@ -1,0 +1,36 @@
+.settings-pnl {
+  background-color: grey;
+  display: grid;
+  grid-template-columns: 23fr 1fr;
+  height: 8rem;
+  width: 100%;
+  gap: 1rem;
+  padding: 0 1rem 1rem 1rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  section {
+    height: 7rem;
+    box-sizing: border-box;
+    padding-top: 0.75rem;
+  }
+
+  section > div {
+    display: grid;
+    grid-template-columns: 14.5fr 19fr;
+    padding-left: 0.5rem;
+    column-gap: 1rem;
+    row-gap: 0.25rem;
+    width: 35rem;
+    height: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.settings-btn-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 1rem;
+}

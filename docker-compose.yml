@@ -1,0 +1,39 @@
+version: "3.7"
+
+services: # docker-compose up -d
+  sp-back: # docker-compose up sp-back
+    build: ./backend
+    environment:
+      - DOCKERBUILD=1
+      - ENABLE_SPOTIFY_DESKTOP
+      - BACKEND_HOST=${BACKEND_HOST}
+      - BACKEND_PORT=${BACKEND_PORT}
+      - FRONTEND_HOST=${FRONTEND_HOST}
+      - FRONTEND_PORT=${FRONTEND_PORT}
+      - SPOTIFY_CLIENT_ID=${SPOTIFY_CLIENT_ID}
+      - SPOTIFY_CLIENT_SECRET=${SPOTIFY_CLIENT_SECRET}
+    ports:
+      - "${BACKEND_PORT}:${BACKEND_PORT}"
+    volumes:
+      - ssh-keys:/root/.ssh
+    entrypoint: ["python", "src/app/main.py"]
+    restart: always
+
+  # set-up: # docker-compose run set-up
+  #   build: .
+  #   volumes:
+  #     - ssh-keys:/home/user/.ssh
+  #   entrypoint: ["/bin/sh"]
+
+  sp-front: # docker-compose up sp-front
+    build: ./frontend
+    environment:
+      - FRONTEND_HOST=${FRONTEND_HOST}
+      - FRONTEND_PORT=${FRONTEND_PORT}
+    ports:
+      - "${FRONTEND_PORT}:${FRONTEND_PORT}"
+    entrypoint: ["/usr/local/bin/entrypoint.sh"]
+    restart: always
+
+volumes:
+  ssh-keys:

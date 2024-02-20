@@ -1,0 +1,54 @@
+.error-pnl {
+  position: relative;
+  top: 100px;
+  left: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #131313;
+  height: 17rem;
+  width: 49rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.refresh-btn {
+  height: 100%;
+  aspect-ratio: 1;
+}
+
+.error-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: #191919;
+  padding: 0.5rem;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.error-card h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: red;
+  margin: 0;
+  padding: 0;
+}
+
+.error-msg-container {
+  height: 100%;
+  width: 100%;
+  align-content: center;
+}
+
+.error-msg {
+  font-size: 1.25rem;
+  color: white;
+  margin: 0;
+  padding-left: 1rem;
+}

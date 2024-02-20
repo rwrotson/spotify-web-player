@@ -1,0 +1,34 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 2rem;
+  box-sizing: border-box;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  label {
+    font-size: 0.65rem;
+    font-weight: 500;
+  }
+
+  input {
+    height: 1rem;
+  }
+
+  .error {
+    color: rgb(255, 119, 119);
+    min-height: 1rem;
+  }
+}
+
+.number-input {
+  width: 3.5rem;
+}

@@ -1,0 +1,15 @@
+.App {
+  box-sizing: border-box;
+  background-color: red;
+  position: relative;
+  top: 100px;
+  left: 100px;
+  width: 49rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 0px solid transparent;
+  border-radius: 5px;
+  margin: 0;
+}
